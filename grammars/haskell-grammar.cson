@@ -13,97 +13,6 @@
   #   'match': '([a-z][a-zA-Z0-9#\']*)\\s*::(\\[?[a-z][a-zA-Z0-9#\']*\\]?)'
   # }
   # {
-  #   'begin': '\\b(function\\*?)\\s*((\\*)|(\\*?[a-zA-Z_$]\\w*))?\\s*(\\()'
-  #   'beginCaptures':
-  #     '1':
-  #       'name': 'storage.type.function.js'
-  #     '3':
-  #       'name': 'storage.type.function.js'
-  #     '4':
-  #       'name': 'entity.name.function.js'
-  #     '5':
-  #       'name': 'punctuation.definition.parameters.begin.js'
-  #   'comment': 'match regular function like: function myFunc(arg) { … }'
-  #   'end': '(\\))'
-  #   'endCaptures':
-  #     '1':
-  #       'name': 'punctuation.definition.parameters.end.js'
-  #   'name': 'meta.function.js'
-  #   'patterns': [
-  #     {
-  #       'include': '#function-params'
-  #     }
-  #   ]
-  # }
-  # {
-  #   'begin': '\\b([a-zA-Z_?.$][\\w?.$]*)\\s*:\\s*\\b(function\\*?)?\\s*(\\*?)(\\()'
-  #   'beginCaptures':
-  #     '1':
-  #       'name': 'entity.name.function.js'
-  #     '2':
-  #       'name': 'storage.type.function.js'
-  #     '3':
-  #       'name': 'storage.type.function.js'
-  #     '4':
-  #       'name': 'punctuation.definition.parameters.begin.js'
-  #   'comment': 'match stuff like: foobar: function() { … }'
-  #   'end': '(\\))'
-  #   'endCaptures':
-  #     '1':
-  #       'name': 'punctuation.definition.parameters.end.js'
-  #   'name': 'meta.function.json.js'
-  #   'patterns': [
-  #     {
-  #       'include': '#function-params'
-  #     }
-  #   ]
-  # }
-  # {
-  #   'begin': '(?:((\')(.*?)(\'))|((")(.*?)(")))\\s*:\\s*\\b(function\\*?)?\\s*(\\*?)(\\()'
-  #   'beginCaptures':
-  #     '1':
-  #       'name': 'string.quoted.single.js'
-  #     '2':
-  #       'name': 'punctuation.definition.string.begin.js'
-  #     '3':
-  #       'name': 'entity.name.function.js'
-  #     '4':
-  #       'name': 'punctuation.definition.string.end.js'
-  #     '5':
-  #       'name': 'string.quoted.double.js'
-  #     '6':
-  #       'name': 'punctuation.definition.string.begin.js'
-  #     '7':
-  #       'name': 'entity.name.function.js'
-  #     '8':
-  #       'name': 'punctuation.definition.string.end.js'
-  #     '9':
-  #       'name': 'storage.type.function.js'
-  #     '10':
-  #       'name': 'storage.type.function.js'
-  #     '11':
-  #       'name': 'punctuation.definition.parameters.begin.js'
-  #   'comment': 'Attempt to match "foo": function'
-  #   'end': '(\\))'
-  #   'endCaptures':
-  #     '1':
-  #       'name': 'punctuation.definition.parameters.end.js'
-  #   'name': 'meta.function.json.js'
-  #   'patterns': [
-  #     {
-  #       'include': '#function-params'
-  #     }
-  #   ]
-  # }
-  # {
-  #   'captures':
-  #     '1':
-  #       'name': 'keyword.operator.new.js'
-  #     '2':
-  #       'name': 'entity.name.type.instance.js'
-  #   'match': '(new)\\s+(\\w+(?:\\.\\w*)?)'
-  #   'name': 'meta.class.instance.constructor'
-  # }
   {
     'include': '#comments'
   }
@@ -376,23 +285,6 @@
         'end': '\\n'
         'name': 'comment.line.double-dash.hs'
       }
-      # {
-      #   'begin': '(^[ \\t]+)?(?=\\-\\-)'
-      #   'beginCaptures':
-      #     '1':
-      #       'name': 'punctuation.whitespace.comment.leading.hs'
-      #   'end': '(?!\\G)'
-      #   'patterns': [
-      #     {
-      #       'begin': '--'
-      #       'beginCaptures':
-      #         '0':
-      #           'name': 'punctuation.definition.comment.inlead.hs'
-      #       'end': '\\n'
-      #       'name': 'comment.line.double-dash.hs'
-      #     }
-      #   ]
-      # }
       {
         'begin': '\\{\\-'
         'captures':
