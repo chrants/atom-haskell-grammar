@@ -1,0 +1,12 @@
+'scopeName': 'source.hs.lhs'
+
+'fileTypes': [
+  'lhs'
+]
+
+# 'firstLineMatch': '^>#!.*\\b'
+'name': 'Haskell (Literate)'
+
+'patterns': [
+  
+]

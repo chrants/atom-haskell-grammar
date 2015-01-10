@@ -5,7 +5,7 @@
 ]
 
 'firstLineMatch': '^#!.*\\b'
-'name': 'Haskell Happy Grammar'
+'name': 'Haskell Happy'
 
 'patterns': [
   {
