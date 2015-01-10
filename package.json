@@ -5,7 +5,7 @@
   "description": "Haskell language support in Atom. Add syntax highlighting to Haskell files!",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/atom-haskell-grammar"
+    "url": "https://github.com/atom/atom-haskell-grammar.git"
   },
   "license": "MIT",
   "engines": {
