@@ -217,7 +217,7 @@
       '1':
         'name': 'entity.name.function.hs'
       '2':
-        'name': 'entity.name.type'
+        'name': 'entity.name.type.hs'
     'end': '(\\->\\s*){0}\\n'
     'patterns': [
       {
@@ -287,11 +287,19 @@
       }
       {
         'begin': '\\{\\-'
-        'captures':
+        'beginCaptures':
           '0':
             'name': 'punctuation.definition.comment.hs'
         'end': '\\-\\}'
         'name': 'comment.block.hs'
+        'patterns': [
+          {
+            'match': '\s*(?<=\#)\s*((?!\-\}).)*'
+            'captures':
+              '0':
+                'name': 'meta.preprocessor.macro.hs'
+          }
+        ]
       }
     ]
   'var_id':

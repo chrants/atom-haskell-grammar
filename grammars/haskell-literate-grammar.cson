@@ -8,5 +8,11 @@
 'name': 'Haskell (Literate)'
 
 'patterns': [
-  
+  {
+    'match': '^(?!>)(.*)(?=\n)'
+    'name': 'comment.line.documentation.hs.lhs'
+  }
+  {
+    'include': 'source.hs'
+  }
 ]
