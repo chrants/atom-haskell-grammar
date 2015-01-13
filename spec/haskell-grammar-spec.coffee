@@ -55,6 +55,13 @@ describe "Haskell grammar", ->
         expect(tokens[2].value).toEqual delim
         expect(tokens[2].scopes).toEqual ["source.hs", scope, "punctuation.definition.string.end.hs"]
 
+  describe "backtick function call", ->
+    it "finds backtick function names", ->
+      {tokens} = grammar.tokenizeLine("\`func\`")
+      expect(tokens[0]).toEqual value: '`', scopes: ['source.hs', 'meta.method.hs']
+      expect(tokens[1]).toEqual value: 'func', scopes: ['source.hs', 'meta.method.hs', 'variable.other.hs']
+      expect(tokens[2]).toEqual value: '`', scopes: ['source.hs', 'meta.method.hs']
+
   describe "keywords", ->
     controlKeywords = ['case', 'of', 'in', 'where', 'if', 'then', 'else']
 

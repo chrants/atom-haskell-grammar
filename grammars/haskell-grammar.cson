@@ -66,6 +66,17 @@
   #   ]
   # }
   {
+    'begin': '`(?=[a-z][a-zA-Z0-9#\']*`)'
+    'end': '`'
+    'comment': 'detect things like `function`'
+    'name': 'meta.method.hs'
+    'patterns': [
+      {
+        'include': '#var_id'
+      }
+    ]
+  }
+  {
     'include': '#numeric'
   }
   {
