@@ -244,6 +244,13 @@
     'match': '\\A#!.*$'
     'name': 'comment.line.shebang.hs'
   }
+
+  {
+    'include': '#var_id'
+  }
+  {
+    'include': '#type_id'
+  }
 ]
 
 'repository':

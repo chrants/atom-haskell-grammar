@@ -152,3 +152,18 @@ describe "Haskell grammar", ->
   #   expect(tokens[0]).toEqual value: '/**', scopes: ['source.js', 'comment.block.documentation.js', 'punctuation.definition.comment.js']
   #   expect(tokens[1]).toEqual value: ' foo ', scopes: ['source.js', 'comment.block.documentation.js']
   #   expect(tokens[2]).toEqual value: '*/', scopes: ['source.js', 'comment.block.documentation.js', 'punctuation.definition.comment.js']
+
+  describe "ids", ->
+    it 'handles var_ids', ->
+      variableIds = ['a', 'c#', 'c90', 'laueou', 'uohcro\'390', 'coheruoeh\'CntoeuhCHR1neouhsS']
+
+      for scope, id of variableIds
+        {tokens} = grammar.tokenizeLine(id)
+        expect(tokens[0]).toEqual value: id, scopes: ['source.hs', 'variable.other.hs']
+
+    it 'handles type_ids', ->
+      typeIds = ['Char', 'Data', 'List', 'Int#', 'Integral', 'Float', 'Date']
+
+      for scope, id of typeIds
+        {tokens} = grammar.tokenizeLine(id)
+        expect(tokens[0]).toEqual value: id, scopes: ['source.hs', 'storage.type.hs']
