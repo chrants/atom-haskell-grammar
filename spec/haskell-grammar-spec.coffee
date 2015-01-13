@@ -17,6 +17,30 @@ describe "Haskell grammar", ->
     expect(grammar).toBeTruthy()
     expect(grammar.scopeName).toBe "source.hs"
 
+  describe "chars", ->
+    it 'tokenizes general chars', ->
+      chars = ['a', '0', '9', 'z', '@', '0', '"']
+
+      for scope, char of chars
+        {tokens} = grammar.tokenizeLine("'" + char + "'")
+        expect(tokens[0].value).toEqual "'"
+        expect(tokens[0].scopes).toEqual ["source.hs", 'constant.character.hs', "punctuation.definition.character.begin.hs"]
+        expect(tokens[1].value).toEqual char
+        expect(tokens[1].scopes).toEqual ["source.hs", 'constant.character.hs']
+        expect(tokens[2].value).toEqual "'"
+        expect(tokens[2].scopes).toEqual ["source.hs", 'constant.character.hs', "punctuation.definition.character.end.hs"]
+
+    it 'tokenizes escape chars', ->
+      escapeChars = ['\t', '\n', '\'']
+      for scope, char of escapeChars
+        {tokens} = grammar.tokenizeLine("'" + char + "'")
+        expect(tokens[0].value).toEqual "'"
+        expect(tokens[0].scopes).toEqual ["source.hs", 'constant.character.hs', "punctuation.definition.character.begin.hs"]
+        expect(tokens[1].value).toEqual char
+        expect(tokens[1].scopes).toEqual ["source.hs", 'constant.character.hs', 'constant.character.escape.hs']
+        expect(tokens[2].value).toEqual "'"
+        expect(tokens[2].scopes).toEqual ["source.hs", 'constant.character.hs', "punctuation.definition.character.end.hs"]
+
   describe "strings", ->
     it "tokenizes single-line strings", ->
       delimsByScope =

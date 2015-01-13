@@ -21,8 +21,8 @@
     'captures':
       '1':
         'name': 'punctuation.definition.character.begin.hs'
-      '2':
-        'name': 'constant.character.hs'
+      # '2':
+      #   'name': 'constant.character.hs'
       '3':
         'name': 'punctuation.definition.character.end.hs'
     # 'end': '\''
