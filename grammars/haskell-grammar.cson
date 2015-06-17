@@ -5,7 +5,7 @@
   'hsl'
 ]
 
-'firstLineMatch': '^#!.*\\b'
+'firstLineMatch': '^#!.*haskell.*'
 'name': 'Haskell'
 
 'patterns': [
