@@ -4,7 +4,7 @@
   'y'
 ]
 
-'firstLineMatch': '^#!.*\\b'
+'firstLineMatch': '^#!.*haskell.*'
 'name': 'Haskell Happy'
 
 'patterns': [
