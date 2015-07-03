@@ -1,6 +1,6 @@
 {
   "name": "haskell-grammar",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Haskell language support in Atom. Add syntax highlighting to Haskell files!",
   "repository": {
     "type": "git",
