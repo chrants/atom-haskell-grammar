@@ -1,6 +1,10 @@
 {
   "name": "haskell-grammar",
+<<<<<<< HEAD
   "version": "0.3.1",
+=======
+  "version": "0.3.0",
+>>>>>>> 173f94bd1c09555604930a95b0ae0bf462a8c96b
   "description": "Haskell language support in Atom. Add syntax highlighting to Haskell files!",
   "repository": {
     "type": "git",
@@ -11,6 +15,7 @@
     "atom": "*",
     "node": "*"
   },
+<<<<<<< HEAD
   "dependencies": {},
   "readme": "# haskell-grammar package\n\nHaskell language support for the Atom text editor.\n\n![A screenshot of a Haskell document!](https://raw.githubusercontent.com/chriswins2much/atom-haskell-grammar/master/Screenshot.png)\n",
   "readmeFilename": "README.md",
@@ -32,4 +37,7 @@
     },
     "folders": []
   }
+=======
+  "dependencies": {}
+>>>>>>> 173f94bd1c09555604930a95b0ae0bf462a8c96b
 }
